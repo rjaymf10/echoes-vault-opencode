@@ -71,7 +71,7 @@ The same repository is also a Claude Code plugin marketplace. Install once at us
 EchoesVault available in every project:
 
 ```text
-/plugin install echoes-vault --marketplace psinetron/echoes-vault-opencode
+/plugin install echoes-vault --marketplace rjaymf10/echoes-vault-opencode
 ```
 
 From a local checkout instead:
