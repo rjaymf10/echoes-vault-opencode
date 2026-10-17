@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "echoes-vault",
+  "description": "EchoesVault repository-local, agent-neutral project memory for Claude Code.",
+  "owner": {
+    "name": "psinetron"
+  },
+  "plugins": [
+    {
+      "name": "echoes-vault",
+      "description": "Claude Code adapter for the agent-neutral EchoesVault Protocol and repository-local Markdown memory runtime.",
+      "category": "productivity",
+      "source": "./claude-plugin"
+    }
+  ]
+}

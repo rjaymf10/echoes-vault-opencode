@@ -65,6 +65,32 @@ only the repositories where memory is wanted:
 /echoes-init
 ```
 
+### Claude Code
+
+The same repository is also a Claude Code plugin marketplace. Install once at user scope to make
+EchoesVault available in every project:
+
+```text
+/plugin install echoes-vault --marketplace psinetron/echoes-vault-opencode
+```
+
+From a local checkout instead:
+
+```sh
+claude plugin marketplace add /path/to/echoes-vault-opencode
+claude plugin install echoes-vault@echoes-vault --scope user
+```
+
+The plugin provides `/echoes-init`, `/echoes-start`, `/echoes-status`, and `/echoes-end`, plus an
+`echoes-vault` skill for search, intermediate notes, and hash-protected page updates. Only the user
+can invoke the init, start, and end commands. All writes go through the bundled runtime as the
+`claude` agent, using the first working interpreter among `ECHOES_VAULT_PYTHON`, `python3`,
+`python`, and `py -3`. A read-only session-start hook only mentions `/echoes-start` in projects that
+already have a vault; it never loads or initializes one.
+
+After changing `scripts/echoes_vault.py`, run `npm run sync:claude` to refresh the plugin's bundled
+copy.
+
 ## Repository layout
 
 ```text

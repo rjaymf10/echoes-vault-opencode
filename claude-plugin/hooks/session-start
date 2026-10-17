@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Read-only SessionStart nudge. It never loads, initializes, or hydrates the vault; it only tells
+# Claude that the project already has EchoesVault memory the user can restore with /echoes-start.
+set -euo pipefail
+
+project="${CLAUDE_PROJECT_DIR:-$PWD}"
+[ -f "$project/EchoesVault/.echoes-vault.json" ] || exit 0
+
+printf '%s\n' '{"hookSpecificOutput":{"hookEventName":"SessionStart","additionalContext":"This repository has EchoesVault project memory in EchoesVault/. Do not load it automatically. If prior project context would help, suggest the user run /echoes-start. Use the echoes-vault skill for searching, noting, or documenting knowledge mid-session; only the user can run /echoes-init and /echoes-end."}}' | cat

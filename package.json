@@ -24,6 +24,7 @@
   ],
   "scripts": {
     "typecheck": "tsc --noEmit",
+    "sync:claude": "node -e \"require('node:fs').copyFileSync('scripts/echoes_vault.py','claude-plugin/scripts/echoes_vault.py')\"",
     "test": "npm run typecheck && node --test tests/*.test.ts",
     "pack:check": "npm pack --dry-run"
   },

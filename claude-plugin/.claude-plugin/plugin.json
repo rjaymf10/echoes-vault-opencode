@@ -1,0 +1,12 @@
+{
+  "name": "echoes-vault",
+  "description": "Claude Code adapter for the agent-neutral EchoesVault Protocol and repository-local Markdown memory runtime.",
+  "version": "2.0.1",
+  "author": {
+    "name": "psinetron"
+  },
+  "homepage": "https://github.com/psinetron/echoes-vault-opencode",
+  "repository": "https://github.com/psinetron/echoes-vault-opencode",
+  "license": "MIT",
+  "keywords": ["memory", "knowledge-base", "vault", "echoes-vault"]
+}
